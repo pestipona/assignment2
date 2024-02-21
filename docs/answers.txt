@@ -1,0 +1,102 @@
+# Date when you went through the Git Lab Tutorials.
+
+    ## “Learn Git Branching”: 02-20-2024
+    ## “Visualizing Git”: 02-21-2024
+    ## More Git Lab tutorials: 02-21-2024
+
+# Date set up GitHub Account: "2021-08-06T04:30:52Z"
+# GitHub Repository: https://github.com/pestipona
+
+# Question 1: Paste the console output you saved at the end of step 3.C
+
+git commit -m "added docs folder and status.txt file"
+[master b8155c7] added docs folder and status.txt file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 docs/status.txt
+PS D:\My Documents\Florida State University\CEN4020 - Software Engineering I\Assignments\Assignment 3 - Git and OOP Warm Up\docs> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 338 bytes | 338.00 KiB/s, done.
+Total 4 (delta 1), reused 1 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+
+# Question 2: How many commits have been done to the repository (not only by you, but by anyone) so far?
+
+9 commits have been made to the repository
+
+# Question 2: Write the git command you used to get this information
+
+git log
+
+# Question 3: When was the README.md file modified last? Write the git command you used to get this information
+
+Wed Feb 21 13:24:00 2024 -0500
+
+git log -1 README.md
+
+# Question 4: Mention two reasons why branches are used in a Git repository
+
+The first reason branches are used in a Git repository is to allow developers to work on developing new code
+in a feature branch without affecting the main branch. This isolates the changes they make in the feature branch without
+affecting the main branch.
+
+The second reason branches are used in a Git repository is to allow collaboration among developers to write code
+especially for a big project. This allows developers to work in parallel with other developers and write their own code
+on their own branches without affecting others, and at the end of their work can merge with other branches or the main branch.
+
+# Question 5: What is the difference between git log and git status?
+
+The difference is in the output and use of each command. Git log is used more for tracking the history of the repository.
+Git log outputs a list of past commits made in the repository with details such as the date, time, author, and commit
+message. Whereas git status is used more in checking the current state of the repository.  Git status outputs what your
+current branch is, if your branch is up to date with 'origin/master', which files are staged for the next commit, and
+which files are untracked by git.
+
+# Question 6: What command would you use to see the commits where “Vehicle.h” was one of the committed files?
+
+git log --follow Vehicle.h
+
+# Question 7: What command would you use to see the commits whose commit message contains the word “file”?
+
+git log --grep="file" -i
+
+# Question 8: In the context of object-oriented programming:
+
+    ## (I) What is inheritance?
+
+    Inheritance is a concept in Object Oriented Programming (OOP) where a new class known as a derived class,
+    is created from a more general form of a class known as the base class. The derived class has all the member variables
+    and member functions of the base class, and can have additional member variables and member functions. Making it a
+    specialized class. The derived class forms an "Is a" relationship of the base class, which can be thought of the child
+    and the base class as the parent.
+
+    ## (II) What is polymorphism?
+
+    Polymorphism is a concept in Object Oriented Programming (OOP) where any data such as a function can be processed
+    in more than one form. It comes from the greek word "poly" meaning many, and "morph" meaning change. There are
+    two types of polymorphism, the first is Static Polymorphism (Compile-Time Polymorphism) and the second one is
+    Dynamic Polymorphism (Run-Time Polymorphism).
+
+    In Static Polymorphism a common example is method overloading, where multiple methods in a class have the same
+    name but different method signatures, such as different number and types of parameters. This is processed during
+    compile time, where the compiler can determine which method to execute based on the method's signature.
+
+    In Dynamic Polymorphism the correct method is determined during runtime based on the object instance by means
+    of using virtual functions. This is also referred to as late binding or dynamic binding. Because the compiler doesn't
+    know how what virtual function will be implemented, only when the object instance is used in the program during
+    run time will the compiler know the correct implementation to use.
+
+    ### (III) What is encapsulation?
+
+    Encapsulation is a concept in Object Oriented Programming (OOP) where data such as attributes and their methods are
+    combined or bundled together into a single unit such as a class. Which makes it easier to use and has some other
+    benefits such as "information hiding" where  private variables are only accessible via the public methods defined
+    in the class. It also enables "abstraction" where the users don't see the inner workings of the class or how the
+    attributes are implemented, all the users see are the data being passed into the class and what is returned.
+
+# Question 9: What is the main difference between the “Dictator and Lieutenants” workflow and the “Integration manager” workflow?
+
+# Question 10: How would a team of 100 developers benefit from following the “Dictator and Lieutenants” workflow instead of the “Centralized” workflow?
+
