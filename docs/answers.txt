@@ -74,7 +74,7 @@ git log --grep="file" -i
 
     ## (II) What is polymorphism?
 
-    Polymorphism is a concept in Object Oriented Programming (OOP) where any data such as a function can be processed
+    Polymorphism is a concept in Object Oriented Programming (OOP) where data such as a function can be processed
     in more than one form. It comes from the greek word "poly" meaning many, and "morph" meaning change. There are
     two types of polymorphism, the first is Static Polymorphism (Compile-Time Polymorphism) and the second one is
     Dynamic Polymorphism (Run-Time Polymorphism).
@@ -85,18 +85,36 @@ git log --grep="file" -i
 
     In Dynamic Polymorphism the correct method is determined during runtime based on the object instance by means
     of using virtual functions. This is also referred to as late binding or dynamic binding. Because the compiler doesn't
-    know how what virtual function will be implemented, only when the object instance is used in the program during
+    know how the virtual function will be implemented, only when the object instance is used in the program during
     run time will the compiler know the correct implementation to use.
 
     ### (III) What is encapsulation?
 
     Encapsulation is a concept in Object Oriented Programming (OOP) where data such as attributes and their methods are
     combined or bundled together into a single unit such as a class. Which makes it easier to use and has some other
-    benefits such as "information hiding" where  private variables are only accessible via the public methods defined
+    benefits such as "information hiding" where  private variables are only accessible to the methods defined
     in the class. It also enables "abstraction" where the users don't see the inner workings of the class or how the
     attributes are implemented, all the users see are the data being passed into the class and what is returned.
 
 # Question 9: What is the main difference between the “Dictator and Lieutenants” workflow and the “Integration manager” workflow?
 
+The main difference between the two workflows is that in the “Dictator and Lieutenants” workflow, you have Lieutenants
+who act as intermediaries who approve merge requests from the developers' topic branches. Then the dictator will
+in turn approve the merges from the lieutenants' master branches before ultimately pushing the changes up into the
+reference repository. Whereas in the “Integration manager” workflow, the integration manager directly pulls the changes
+from the developers' topic branches and merges them locally before pushing it to the main repository. The “Dictator and
+Lieutenants” workflow, also works well for large projects such as the Linux Kernel with hundreds of collaborators. It
+also breaks the integration and merging process into several more manageable groups versus having one large group in the
+“Integration manager” workflow which can be a lot of work for the integration manager if he has hundreds of contributors.
+
+
 # Question 10: How would a team of 100 developers benefit from following the “Dictator and Lieutenants” workflow instead of the “Centralized” workflow?
 
+Having a large project that involves 100's of developers would benefit better following the “Dictator and Lieutenants”
+workflow instead of the “Centralized” workflow. Because in the “Dictator and Lieutenants” workflow, the integration
+portion of a project can be subdivided into several groups headed by Lieutenants who are each responsible for approving
+merge requests from their own respective developers' topic branches. Hence, simplifying the integration and version control
+process. Whereas in the “Centralized” workflow, each developer has to wait and must merge in their work before pushing
+changes up, if another developer has already pushed their changes to the centralized repository, so as not to overwrite
+the previous developer’s changes. This can greatly slow down the process especially if the project involves 100's of
+developers and can make merging and tracking the latest commit confusing.
